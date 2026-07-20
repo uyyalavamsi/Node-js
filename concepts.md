@@ -48,3 +48,6 @@ The process module is a built-in global object in Node.js that provides informat
 -->The number passed to process.exit() is called the exit code. It tells the operating system whether your program finished successfully or failed.
 Means the program completed successfully.
 Means the program exited because of an error.
+
+
+2.Crypto Module.
