@@ -47,7 +47,12 @@ function runOsDemo(): void {
     console.log("OS free memory :", os.freemem());
     console.log("OS tmpdir :", os.tmpdir());
     console.log("OS homedir :", os.homedir());
-    console.log("OS cpus :", os.cpus());
+    // console.log("OS cpus :", os.cpus());
+    const cpus = os.cpus();
+    console.log(cpus.length);
+    if (cpus.length > 0) {
+        console.log("cpu model ", cpus[0].model, cpus[0].speed, cpus[0].times);
+    }
     console.log("OS network interfaces :", os.networkInterfaces());
 }
 
