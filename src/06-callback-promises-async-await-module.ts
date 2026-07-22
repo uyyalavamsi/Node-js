@@ -125,6 +125,10 @@ It is also called the "Pyramid of Doom" because the code keeps shifting to the r
 // ------------------------------------------------------------------------------------------------------
 /*
 promise call back example fetching the data from the array if present
+
+Note: Always reject a Promise with an `Error` object (e.g., `new Error("...")`)
+instead of a plain string. This ensures that the stack trace is preserved
+and error handling like `error instanceof Error` works correctly in `try-catch` blocks.
 */
 function findUserByPromise(userId: number): Promise<User> {
     return new Promise((resolve, reject) => {
